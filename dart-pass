@@ -1,0 +1,79 @@
+ //Q1 : THE CORRECT CODE
+ void main() {
+  DateTime hour= new DateTime.now();
+  print(hour.hour);
+}
+
+//the errors 
+//1- we can’t use (const) for DateTime variables because  the DateTime changing and (const) is constant takes just one value
+//2- we must use DateTime before variable hour instead (const)
+//3- we must use ( new )before DateTime 
+//4- .hour it must be with line of variable hour like [print(hour.hour)] not with line of  DateTime
+
+
+//Q2
+void main(){
+   
+   var CAT = Cat();
+   CAT.printName();
+   CAT.printSound();
+   var DOG = Dog();
+   DOG.printName();
+   DOG.printSound();
+   var COW =  Cow();
+   COW.printName();
+   COW.printSound();
+     
+}
+
+abstract class Animal {
+  void printName();
+  void printSound();
+}
+
+
+class Cat extends Animal {
+
+  String name = "CAT";
+  void printName() {
+    print("Name : ${name}");
+  }
+
+
+  String sound = "meowmeow ";
+  void printSound() {
+    print("Sound :${sound}");
+  }
+}
+
+
+
+class Dog extends Animal {
+
+  String name = "DOG";
+  void printName() {
+    print("Name : ${name}");
+  }
+
+
+  String sound = "ho ho ho ho ";
+  void printSound() {
+    print("Sound :${sound}");
+  }
+}
+
+
+
+class Cow extends Animal {
+
+  String name = "COW";
+  void printName() {
+    print("Name: ${name}");
+  }
+
+ 
+  String sound = "moo moo moo";
+  void printSound() {
+    print("Sound :${sound}");
+  }
+}
