@@ -1,0 +1,11 @@
+x=int(input("Enter X value : "))
+def x_value(x):
+ for i in range(x):
+    x=int(input())
+    Number=x%2
+    if(Number==0):
+     print(x,"is even")
+    else:
+        print(x,"is odd")
+
+x_value(x)
